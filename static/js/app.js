@@ -139,7 +139,7 @@ function barChart(sample) {
         
 
 // plot the data into bar chart
-        Plotlyy.newPlot("bar", [traceBar], layout)
+        Plotly.newPlot("bar", [traceBar], layout)
     });
 };
 
@@ -155,7 +155,7 @@ function bubbleChart(sample) {
         
 
 // set variables for bubble chart and log
-        let dataSamples = data.samples
+        let dataSamples = data.samples;
         let resultID = dataSamples.filter(result => result.id == sample);
         let firstID = resultID[0];
 
@@ -163,7 +163,7 @@ function bubbleChart(sample) {
         let otu_labels = firstID.otu_labels;
         let sample_values = firstID.sample_values;
 
-        consolee.log(otu_ids,otu_labels,sample_values);
+        console.log(otu_ids,otu_labels,sample_values);
         
         
 
@@ -183,7 +183,7 @@ function bubbleChart(sample) {
         
 
 // create layout for bubble chart
-        let layout = 
+        let layout = {
             title: {
                 text: "<b>bacteria per sample</b>",
                 font: {color: "black", size: 22}
