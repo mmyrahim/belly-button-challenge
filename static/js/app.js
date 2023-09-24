@@ -70,3 +70,22 @@ function demographicInfo(sample) {
         d3.select("#sample-metadata").html("");
 
         
+
+// add each key/value pair to the chart and log as they are being appended to the metadata display section
+Object.entries(firstID).forEach(([key,resultID]) => {
+    console.log(key,resultID);
+    d3.select("#sample-metadata").append("h5").text(`${key}: ${resultID}`);
+});
+});
+
+};
+
+
+// function to build bar chart
+function barChart(sample) {
+
+
+
+// retriveing json data
+d3.json(url).then((data) => {
+
